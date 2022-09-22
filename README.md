@@ -1,10 +1,10 @@
 # cplusplus_custom_string
 A C++ custom string data structure inherited from custom vector data structure.  
 一個繼承自定義CVector的自定義MyString資料結構。
-### CVector
+## CVector
 This vector can only store char type element(do not use template).  
 此自定義vector只能儲存char type的元素(未使用Template)。
-#### Methods
+### Methods
 |Name |Function|
 |-----|--------|
 |getSize|Get the number of elements|  
@@ -20,10 +20,10 @@ This vector can only store char type element(do not use template).
 |operator==|Check if two CVector have same elements|
 |operator!=|Check if two CVector have different elements|
 
-### MyString
+## MyString
 Mystring is inherited from CVector.  
 Mystring繼承自CVector。
-#### Methods
+### Methods
 |Name |Function|
 |-----|--------|
 |append|Append two string|  
