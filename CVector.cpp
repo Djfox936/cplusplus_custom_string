@@ -8,7 +8,7 @@ CVector::CVector()
 	sPtr = new char[10];
 	size = 0;
 	capacity = 10;
-	for (size_t i = 0; i < capacity; i++)//��l�Ƥ���
+	for (size_t i = 0; i < capacity; i++)
 	{
 		sPtr[i] = '\0';
 	}
@@ -29,11 +29,11 @@ CVector::~CVector()
 
 	delete[]sPtr;
 }
-size_t CVector::getSize() const//okay
+size_t CVector::getSize() const
 {
 	return size;
 }
-void CVector::resize(size_t n, char c = '\0')//okay
+void CVector::resize(size_t n, char c = '\0')
 {
 	if (n <= size)
 	{
@@ -77,7 +77,7 @@ void CVector::reserve(size_t n = 0)//okay
 	}
 
 }
-void CVector::shrink_to_fit()//okay
+void CVector::shrink_to_fit()
 {
 
 	char *tempptr;
@@ -99,15 +99,15 @@ void CVector::shrink_to_fit()//okay
 
 }
 
-void CVector::clear()//okay
+void CVector::clear()
 {
 	size = 0;
-	for (size_t i = 0; i < capacity; i++)//���������w�]��\0
+	for (size_t i = 0; i < capacity; i++)
 	{
 		sPtr[i] = '\0';
 	}
 }
-bool CVector::empty() const//okay
+bool CVector::empty() const
 {
 	if (size == 0)
 	{
@@ -128,7 +128,7 @@ char& CVector::back()
 	return sPtr[size - 1];
 
 }
-void CVector::push_back(char c)//
+void CVector::push_back(char c)
 {
 	if (size == capacity - 1 || size >= capacity - 1)
 	{
@@ -139,20 +139,20 @@ void CVector::push_back(char c)//
 	size++;
 
 }
-void CVector::pop_back()//okay
+void CVector::pop_back()
 {
 	if (size != 0)
 		size--;
 	sPtr[size] = '\0';
 }
 
-char& CVector::operator[] (size_t pos)//okay
+char& CVector::operator[] (size_t pos)
 {
 
 	return sPtr[pos];
 
 }
-char CVector::operator[] (size_t pos) const//okay
+char CVector::operator[] (size_t pos) const
 
 {
 
@@ -160,7 +160,7 @@ char CVector::operator[] (size_t pos) const//okay
 	return sPtr[pos];
 
 }
-bool CVector::operator==(const CVector &str) const//okay
+bool CVector::operator==(const CVector &str) const
 {
 	if (size != str.size)
 	{
@@ -173,7 +173,7 @@ bool CVector::operator==(const CVector &str) const//okay
 	}
 	return true;
 }
-bool CVector::operator!=(const CVector &str) const//�Q��operator == overloading�����P�_//okay
+bool CVector::operator!=(const CVector &str) const
 {
 	if (*this == str)
 	{
@@ -185,7 +185,7 @@ bool CVector::operator!=(const CVector &str) const//�Q��operator == overlo
 	}
 }
 
-ostream &operator<<(ostream& output, const CVector& vec)//okay
+ostream &operator<<(ostream& output, const CVector& vec)
 {
 	for (size_t i = 0; i < vec.getSize(); i++)
 	{
