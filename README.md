@@ -1,6 +1,5 @@
 # cplusplus_custom_string
-## A C++ custom string data structure inherited from custom vector data structure
-C++ custom string data structure inherited from custom vector data structure.  
+A C++ custom string data structure inherited from custom vector data structure.  
 一個繼承自定義CVector的自定義MyString資料結構。
 ### CVector
 This vector can only store char type element(do not use template).  
